@@ -13,3 +13,6 @@
 
 # vendored deps are not kept in git
 vendor
+
+# generated goa code
+app

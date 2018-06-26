@@ -8,13 +8,11 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/fabric8-services/fabric8-wit/configuration"
-
 	"github.com/goadesign/goa"
 	log "github.com/sirupsen/logrus"
 )
 
-const defaultPackageName = "github.com/fabric8-services/fabric8-wit/"
+const defaultPackageName = "github.com/fabric8-services/fabric8-common/"
 
 var (
 	logger = &log.Logger{
@@ -303,19 +301,6 @@ func extractCallerDetails() (file string, line int, pkg string, function string,
 	return "", 0, "", "", errors.New("unable to extract the caller details")
 }
 
-// getDefaultLogLevel extracts the log level out of the ENV variable. It is used
-// in tests and as default static initialization of the log. If the ENV variable
-// is not set then the log level is Info.
 func getDefaultLogLevel() log.Level {
-	config, err := configuration.New("")
-	if err != nil {
-		log.Errorf("error getting configuration data")
-	}
-
-	logLevel, err := log.ParseLevel(config.GetLogLevel())
-	if err != nil {
-		log.Warnf("unable to parse log level configuration error: %q", err)
-		return log.InfoLevel // reset to INFO
-	}
-	return logLevel
+	return log.InfoLevel // reset to INFO
 }
