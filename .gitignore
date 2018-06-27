@@ -16,3 +16,6 @@ vendor
 
 # generated goa code
 app
+
+# IDE generated
+.idea/
