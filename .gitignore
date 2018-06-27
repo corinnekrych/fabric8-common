@@ -10,3 +10,9 @@
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+
+# vendored deps are not kept in git
+vendor
+
+# generated goa code
+app
