@@ -80,7 +80,7 @@ required = [
 
 [[constraint]]
   name = "github.com/stretchr/testify"
-  version = "1.1.0"
+  version = "1.2.0"
 
 # [[constraint]]
 #   name = "gopkg.in/asaskevich/govalidator.v4"
@@ -105,10 +105,6 @@ required = [
 [[constraint]]
   name = "github.com/getsentry/raven-go"
   revision = "master"
-
-[[constraint]]
-  name = "github.com/davecgh/go-spew"
-  version = "v1.1.0"
 
 # [[constraint]]
 #   name = "github.com/dnaeon/go-vcr"
