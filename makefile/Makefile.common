@@ -223,7 +223,7 @@ clean-vendor:
 CLEAN_TARGETS += clean-tmp
 .PHONY: clean-tmp
 ## Removes the ./vendor directory.
-clean-vendor:
+clean-tmp:
 	-rm -rf $(TMP_DIR)
 
 # Keep this "clean" target here after all `clean-*` sub tasks
